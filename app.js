@@ -13,7 +13,7 @@ app.get("/",function(req,res){
     res.sendFile(__dirname +"/signup.html");
 });
 //get the form data
-app.post("/data", function(req,res){
+app.post("/", function(req,res){
     var fname = req.body.firstname;
     var lname =req.body.lastname;
     var email =req.body.email;
