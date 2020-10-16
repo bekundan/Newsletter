@@ -12,6 +12,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.get("/",function(req,res){
     res.sendFile(__dirname +"/signup.html");
 });
+app.get("*", function(req,res){
+    res.sendFile(__dirname + "/404.html");
+});
 //get the form data
 app.post("/", function(req,res){
     var fname = req.body.firstname;
